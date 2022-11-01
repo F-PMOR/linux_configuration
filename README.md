@@ -1,6 +1,6 @@
 # linux_configuration
 
-##vim configuration
+## vim configuration
 
 
-##Bashrc configuration
+## Bashrc configuration
