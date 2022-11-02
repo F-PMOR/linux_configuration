@@ -1,0 +1,7 @@
+Color_rouge="\033[31m"
+Color_violet="\033[35m"
+Color_vert="\033[32m"
+Color_bckrouge="\033[41m"
+Color_reset="\033[0m"
+
+echo -e "${Color_violet}-> Token récupéré via la variable LC_VAULTTOKEN${Color_reset}"
