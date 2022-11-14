@@ -1,0 +1,2 @@
+#add auto-correction feature
+git config --global help.autocorrect 1
