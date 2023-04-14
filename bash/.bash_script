@@ -1,0 +1,15 @@
+function gitcomment () 
+{
+    if [ -d "./.git" ] && [ -z ${comment:+x} ];
+        then 
+            echo "no git comment set"
+            read -p "your commit comment: " comment
+        else
+            echo "commit comment :'$comment'"
+            read -p "change it ? (y/n)" change
+            case change in
+                "y") read -p "your commit comment: " comment && export comment;;
+                * ) echo "git comment : ${comment}";;
+            esac
+    fi
+}

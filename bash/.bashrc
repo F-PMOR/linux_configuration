@@ -13,15 +13,16 @@ fi
 # PS1='\h:\w$ '
 # umask 022
 
-# You may uncomment the following lines if you want "ls" to be colorized:
-export LS_OPTIONS='--color=auto'
-eval "$(dircolors)"
-export LS_COLORS
-alias ls='ls ${LS_OPTIONS}'
-alias ll='ls -al ${LS_OPTIONS}'
-alias l='ls -lA ${LS_OPTIONS}'
-#
-# Some more alias to avoid making mistakes:
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+# Defined the default editor
+export EDITOR=vim
+
+# use bash_aliases for all alias
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# include bash_script
+if [ -f ~/.bash_script ]; then
+    . ~/.bash_script
+fi
+
