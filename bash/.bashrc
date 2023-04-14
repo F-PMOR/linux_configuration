@@ -1,3 +1,7 @@
+#############################################################
+# BASHRC ADDITIONNAL DATA - PMORRY                          #
+#############################################################
+
 # Added by openmediavault (https://www.openmediavault.org).
 if ! shopt -oq posix; then
     if [ -f /usr/share/bash-completion/bash_completion ]; then
