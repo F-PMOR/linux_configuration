@@ -16,11 +16,13 @@ fi
 
 function gitcomment () 
 {
-    if [ -z ${GITCOMMENT:""} ];
+    if [ -z ${GITCOMMENT} ];
         then 
             echo "no git comment set"
             read -p "your commit comment: " GITCOMMNENT
-            export GITCOMMENT
+            echo "avant : $GITCOMMENT"
+            export GITCOMMENT="${GITCOMMENT}"
+            echo "après : $GITCOMMENT"
         else
             echo "commit comment : ${GITCOMMNENT}"
             read -p "change it ? (y/n)" change
