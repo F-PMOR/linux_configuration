@@ -25,7 +25,7 @@ function gitcomment ()
             echo "commit comment : ${GITCOMMNENT}"
             read -p "change it ? (y/n)" change
             case change in
-                "y|Y") read -p "your commit comment: " GITCOMMNENT && export GITCOMMNENT;;
+                "y") read -p "your commit comment: " GITCOMMNENT && export GITCOMMNENT;;
                 * ) echo "git comment : ${comment}" ;;
             esac
     fi
