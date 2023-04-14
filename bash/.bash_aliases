@@ -14,7 +14,9 @@ alias mv='mv -i'
 # git aliases
 alias Gs='git status'
 alias Ga='git add . '
-alias Gc="f() { git commit -m \"$*\"; }; f"
+alias Gc='f() { git commit -m \"$*\"; }; f'
 # alias Gc='gitcomment && git commit -am ${comment}'
 alias Gp='git push'
 alias Gacp='git add. && gitcomment && git commit -am ${comment}; git push'
+
+

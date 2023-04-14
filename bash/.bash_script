@@ -1,15 +1,28 @@
 function gitcomment () 
 {
-    if [ -d "./.git" ] && [ -z ${comment:+x} ];
+    if [ -z ${GITCOMMENT:+x} ];
         then 
             echo "no git comment set"
-            read -p "your commit comment: " comment
+            read -p "your commit comment: " GITCOMMNENT
         else
-            echo "commit comment :'$comment'"
+            echo "commit comment : ${GITCOMMNENT}"
             read -p "change it ? (y/n)" change
             case change in
-                "y") read -p "your commit comment: " comment && export comment;;
-                * ) echo "git comment : ${comment}";;
+                "y|Y") read -p "your commit comment: " GITCOMMNENT && export GITCOMMNENT;;
+                * ) echo "git comment : ${comment}" ;;
             esac
     fi
+    git commit -am "$GITCOMMNENT"
 }
+function testgitrepo ()
+{
+    if [ -d "./.git" ] ;
+        then 
+            echo "in git repos"
+        else
+            echo "not in a git repo : .git not found"
+            exit
+    fi
+}
+
+testgitrepo && gitcomment
