@@ -16,7 +16,7 @@ fi
 
 function gitcomment () 
 {
-    if [[ -z ${GITCOMMENT} ]];
+    if [ -z "${GITCOMMENT}" ];
         then 
             echo "no git comment set"
             read -p "your commit comment: " GITCOMMENT
