@@ -1,3 +1,19 @@
+
+
+function gtp {
+if [ $# -eq 1 ]; then
+    MES=$1
+    git add .
+    if [ -e .gitlab-ci.yml ]; then
+        git add .gitlab-ci.yml
+    fi
+    git commit -m $MES
+    git push
+else
+ echo "Il manque un parametre"
+fi
+}
+
 function gitcomment () 
 {
     if [ -z ${GITCOMMENT:+x} ];
@@ -16,13 +32,14 @@ function gitcomment ()
 }
 function testgitrepo ()
 {
-    if [ -d "./.git" ] ;
+    if [ -d "./.git" ];
         then 
             echo "in git repos"
+            gitcomment
         else
             echo "not in a git repo : .git not found"
-            exit
+            # exit
     fi
 }
 
-# testgitrepo && gitcomment
+# testgitrepo

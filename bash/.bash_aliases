@@ -11,12 +11,11 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# git aliases
+# GIT aliases
 alias Gs='git status'
 alias Ga='git add . '
-# alias Gc='f() { git commit -am \"$*\"; }; f'
 # pour git commit, on lance un script qui va tester si on est dans un repo git et s'il y a un commentaire.
-alias Gc='testgitrepo && gitcomment'
+alias Gc='testgitrepo'
 alias Gp='git push'
 alias Gacp='Gs && Ga && Gc && Gp'
 
