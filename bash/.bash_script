@@ -20,6 +20,7 @@ function gitcomment ()
         then 
             echo "no git comment set"
             read -p "your commit comment: " GITCOMMNENT
+            echo ${GITCOMMENT}
             echo "avant : ${GITCOMMENT}"
             export GITCOMMENT="${GITCOMMENT}"
             echo "après : ${GITCOMMENT}"
