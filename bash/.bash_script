@@ -20,9 +20,9 @@ function gitcomment ()
         then 
             echo "no git comment set"
             read -p "your commit comment: " GITCOMMNENT
-            echo "avant : $GITCOMMENT"
+            echo "avant : ${GITCOMMENT}"
             export GITCOMMENT="${GITCOMMENT}"
-            echo "après : $GITCOMMENT"
+            echo "après : ${GITCOMMENT}"
         else
             echo "commit comment : ${GITCOMMNENT}"
             read -p "change it ? (y/n)" change
