@@ -1,4 +1,4 @@
-
+# bash function
 
 function gtp {
 if [ $# -eq 1 ]; then
@@ -20,6 +20,7 @@ function gitcomment ()
         then 
             echo "no git comment set"
             read -p "your commit comment: " GITCOMMNENT
+            export GITCOMMENT
         else
             echo "commit comment : ${GITCOMMNENT}"
             read -p "change it ? (y/n)" change
@@ -42,4 +43,4 @@ function testgitrepo ()
     fi
 }
 
-# testgitrepo
+
