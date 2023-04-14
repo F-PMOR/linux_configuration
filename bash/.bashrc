@@ -21,8 +21,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# include bash_script
-if [ -f ~/.bash_script ]; then
-    . ~/.bash_script
-fi
-
+# Source all .bashrc files 
+for file in ~/.bashrc.d/*.bashrc; do
+. "$file"
+done
