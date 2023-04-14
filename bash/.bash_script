@@ -16,24 +16,25 @@ fi
 
 function gitcomment () 
 {
-    if [ -z ${GITCOMMENT} ];
+    if [[ -z ${GITCOMMENT} ]];
         then 
             echo "no git comment set"
-            read -p "your commit comment: " GITCOMMNENT
+            read -p "your commit comment: " GITCOMMENT
             echo ${GITCOMMENT}
             echo "avant : ${GITCOMMENT}"
             export GITCOMMENT="${GITCOMMENT}"
             echo "après : ${GITCOMMENT}"
         else
-            echo "commit comment : ${GITCOMMNENT}"
+            echo "commit comment : ${GITCOMMENT}"
             read -p "change it ? (y/n)" change
             case change in
-                "y") read -p "your commit comment: " GITCOMMNENT && export GITCOMMNENT;;
+                "y") read -p "your commit comment: " GITCOMMENT && export GITCOMMENT;;
                 * ) echo "git comment : ${comment}" ;;
             esac
     fi
-    git commit -am "$GITCOMMNENT"
+    git commit -am "$GITCOMMENT"
 }
+
 function testgitrepo ()
 {
     if [ -d "./.git" ];
