@@ -22,14 +22,15 @@ function gitcomment ()
             read -p "your commit comment: " GITCOMMENT
             echo ${GITCOMMENT}
             echo "avant : ${GITCOMMENT}"
-            export GITCOMMENT="${GITCOMMENT}"
+            # export GITCOMMENT="${GITCOMMENT}"
+            export GITCOMMENT
             echo "après : ${GITCOMMENT}"
         else
             echo "commit comment : ${GITCOMMENT}"
             read -p "change it ? (y/n)" change
-            case change in
+            case $change in
                 "y") read -p "your commit comment: " GITCOMMENT && export GITCOMMENT;;
-                * ) echo "git comment : ${comment}" ;;
+                * ) echo "git comment : ${GITCOMMENT}" ;;
             esac
     fi
     git commit -am "$GITCOMMENT"
