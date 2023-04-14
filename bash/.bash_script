@@ -25,4 +25,4 @@ function testgitrepo ()
     fi
 }
 
-testgitrepo && gitcomment
+# testgitrepo && gitcomment
