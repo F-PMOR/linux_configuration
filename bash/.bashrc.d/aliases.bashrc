@@ -21,9 +21,11 @@ alias Gc='testgitrepo'
 alias Gp='git push'
 alias Gacp='Gs && Ga && Gc && Gp'
 # autres alias
+alias Gb='git branch -a'
 alias Gs='git status'
 alias Gf='git fetch'
 alias Gpull='git pull'
+
 
 
 
