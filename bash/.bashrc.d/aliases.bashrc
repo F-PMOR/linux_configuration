@@ -11,6 +11,11 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+##################
+# Python aliases #
+##################
+alias venv='. ~/dev/venv/bin/activate'
+
 ###############
 # GIT aliases #
 ###############

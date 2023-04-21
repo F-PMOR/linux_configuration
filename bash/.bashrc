@@ -26,6 +26,17 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Source all .bashrc files 
-for file in ~/.bashrc.d/*.bashrc; do
-. "$file"
-done
+# add bashrc directory configuration
+if [ -d ~/.bashrc.d ];
+then
+    for file in ~/.bashrc.d/*.bashrc
+    do  
+        . "$file"
+    done
+fi
+
+# Si python venv existe dans ~/dev/ : alors on ajoute un alias venv
+if [ -d ~/dev/venv ];
+then
+    echo -e "$Color_yellow Pour activer l'environement virtuel python tapper : venv $Color_reset"
+fi
