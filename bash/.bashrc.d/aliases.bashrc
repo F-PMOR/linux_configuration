@@ -12,6 +12,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 ##################
+# SSH aliases    #
+##################
+alias sal='ssh-add -l'
+
+##################
 # Python aliases #
 ##################
 alias venv='. ~/dev/venv/bin/activate'
